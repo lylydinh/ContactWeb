@@ -4,8 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @RenderSection("styles",false)
+    @*@Styles.Render("~/Content/css")*@
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="~/Content/css/jquery.dataTables_themeroller.css" rel="stylesheet" />
+    <link href="~/Content/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/colReorder.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/site.css" rel="stylesheet" />
+
+    @RenderSection("styles", false)
 </head>
 <body>
     <div class="navbar navbar-default navbar-fixed-top">
@@ -36,9 +43,15 @@
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/datatables")
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/datatables")*@
+    <script src="~/Content/js/lib/jquery.min.js"></script>
+    <script src="~/Content/js/lib/bootstrap.min.js"></script>
+    <script src="~/Content/js/lib/jquery.dataTables.min.js"></script>
+    <script src="~/Content/js/lib/dataTables.bootstrap.min.js"></script>
+    <script src="~/Content/js/lib/dataTables.colReorder.min.js"></script>
+
     @RenderSection("scripts", required: false)
 </body>
 </html>
